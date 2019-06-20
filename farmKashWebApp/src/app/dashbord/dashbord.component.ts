@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ApplicationService } from '../application.service';
+import { Applicants } from '../applicants';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @Component({
   selector: 'app-dashbord',
@@ -7,9 +11,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashbordComponent implements OnInit {
 
-  constructor() { }
+  // applicant: Applicants[];
+  applicant =[];
+ 
+  
+  constructor(private bs:  ApplicationService) { }
 
   ngOnInit() {
+
+    //fetch all applicants on loading of system
+    this.bs
+    .getApplicants()
+      .then((data: any) => {
+        this.applicant = data;
+        console.log('applicant',this.applicant[1]);
+    });
   }
+
 
 }

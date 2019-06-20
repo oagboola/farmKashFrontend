@@ -1,3 +1,87 @@
-<p>
-  dashbord works!
-</p>
+<div class="main-w3-pvt-header-sec page-w3pvt-inner" id="home">
+  <div class="overlay-innerpage">
+      <!-- header -->
+      <header>
+          <div class="container">
+              <div class="header d-lg-flex justify-content-between align-items-center py-lg-3 px-lg-3">
+
+                  <div id="logo">
+                      <h1><a href="index.html"><span class="fa fa-recycle mr-2"></span>FarmKa$h</a></h1>
+                  </div>
+
+              </div>
+          </div>
+      </header>
+
+  </div>
+</div>
+
+<section class="content-info py-5">
+  <div class="container py-md-5">
+
+      <h3 class="title-w3ls mb-5 text-center">Administrators Dashboard</h3>
+      <div class="table-responsive text-nowrap table-hover">
+
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Applicants ID</th>
+                    <th scope="col">Application Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let applicants of applicant ">
+                    <th scope="row">1</th>
+                    <td>{{ applicants.firstName}} {{ applicants.lastName}} </td>
+                    <td>{{ applicants._id }}</td>
+                    <td>{{ applicants.status }}Pending</td>
+                    <td><a [routerLink]="['/profile', applicants._id]"  class="btn btn-primary">View Application</a></td>
+                  </tr>
+                 
+                </tbody>
+              </table>
+
+            </div>
+
+
+      </div>
+</section>
+
+<!-- //footer -->
+<div class="copy-right">
+  <div class="container">
+      <div class="row">
+          <p class="copy-right-grids text-md-left text-center my-sm-4 my-4 col-md-6">© 2019 FarmKa$h. All Rights Reserved | Design by
+              <a href="http://FarmKash.com/">  FarmKa$h </a>
+          </p>
+          <div class="w3-pvt-footer text-md-right text-center mt-4 col-md-5">
+              <ul class="list-unstyled w3-pvt-icons">
+                  <li>
+                      <a href="#">
+                          <span class="fa fa-facebook-f"></span>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#">
+                          <span class="fa fa-twitter"></span>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#">
+                          <span class="fa fa-dribbble"></span>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#">
+                          <span class="fa fa-vk"></span>
+                      </a>
+                  </li>
+              </ul>
+          </div>
+          <div class="move-top text-right col-md-1"><a href="#home" class="move-top"> <span class="fa fa-angle-up  mb-3" aria-hidden="true"></span></a></div>
+
+      </div>
+  </div>
+</div>
