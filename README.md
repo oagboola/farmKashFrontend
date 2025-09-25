@@ -1,6 +1,14 @@
 # FarmKashWebApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.3.
+## 🌱 FarmKash Web App
+FarmKash is a platform designed to connect farmers with investors and resources, helping them scale agricultural projects through technology.  
+This web app is built with Angular 8 and provides a responsive interface for managing farm investments, projects, and user profiles.
+
+### ✨ Features
+- User authentication and profile management  
+- Dashboard for tracking farm projects  
+- Investment management  
+- Real-time updates with Angular services  
 
 ## Development server
 
